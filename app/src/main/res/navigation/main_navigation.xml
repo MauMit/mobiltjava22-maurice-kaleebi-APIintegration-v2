@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/blankFragment">
+
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.uppgifttest4api.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" >
+        <action
+            android:id="@+id/action_blankFragment_to_spookyFragment"
+            app:destination="@id/spookyFragment" />
+        <action
+            android:id="@+id/action_blankFragment_to_darkFragment"
+            app:destination="@id/darkFragment" />
+        <action
+            android:id="@+id/action_blankFragment_to_dogFragment"
+            app:destination="@id/dogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/spookyFragment"
+        android:name="com.example.uppgifttest4api.SpookyFragment"
+        android:label="fragment_spooky"
+        tools:layout="@layout/fragment_spooky" >
+        <action
+            android:id="@+id/action_spookyFragment_to_darkFragment"
+            app:destination="@id/darkFragment" />
+        <action
+            android:id="@+id/action_spookyFragment_to_dogFragment"
+            app:destination="@id/dogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/darkFragment"
+        android:name="com.example.uppgifttest4api.DarkFragment"
+        android:label="fragment_dark"
+        tools:layout="@layout/fragment_dark" >
+        <action
+            android:id="@+id/action_darkFragment_to_spookyFragment"
+            app:destination="@id/spookyFragment" />
+        <action
+            android:id="@+id/action_darkFragment_to_dogFragment"
+            app:destination="@id/dogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogFragment"
+        android:name="com.example.uppgifttest4api.DogFragment"
+        android:label="fragment_dog"
+        tools:layout="@layout/fragment_dog" >
+        <action
+            android:id="@+id/action_dogFragment_to_spookyFragment"
+            app:destination="@id/spookyFragment" />
+        <action
+            android:id="@+id/action_dogFragment_to_darkFragment"
+            app:destination="@id/darkFragment" />
+
+
+
+    </fragment>
+    <action
+        android:id="@+id/to_blankFragmentPop"
+        app:destination="@id/blankFragment"
+        app:popUpTo="@+id/blankFragment"
+        app:popUpToInclusive="true"/>
+</navigation>

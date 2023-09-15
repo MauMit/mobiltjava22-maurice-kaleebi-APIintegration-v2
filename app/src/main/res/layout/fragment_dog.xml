@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DogFragment">
+
+
+    <TextView
+        android:id="@+id/dogText"
+        android:layout_width="214dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/press_the_button_to_get_a_dog_pic"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.111" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/dogButton"
+        android:layout_width="160dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/get_dog_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
+
+
+</LinearLayout>
